@@ -93,7 +93,7 @@
                 </execution>
               </executions>
               <configuration>
-                <executable>/var/lib/devSecOps/ScaResolver-linux64/ScaResolver</executable>
+                <executable>D:/LGV/bin/ScaResolver-win64/ScaResolver.exe</executable>
                 <!--
                 <workingDirectory>/var/lib/devSecOps/ScaResolver-linux64</workingDirectory>
                 -->
@@ -102,7 +102,7 @@
                   <argument>--project-name</argument>
                   <argument>lgi-generic_dev_test</argument>
                   <argument>--account</argument>
-                  <argument>LibertyGlobal</argument>
+                  <argument>LibertyGlobalKK</argument>
                   <argument>--project_teams</argument>
                   <argument>/CxServer/LG-DOP</argument>
                   <argument>--server_url</argument>
