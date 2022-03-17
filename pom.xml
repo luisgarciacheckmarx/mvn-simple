@@ -102,30 +102,30 @@
                   <argument>--project-name</argument>
                   <argument>lgi-generic_dev_test</argument>
                   <argument>--account</argument>
-                  <argument>LibertyGlobalKK</argument>
+                  <argument>ps-team-emea</argument>
                   <argument>--project_teams</argument>
-                  <argument>/CxServer/LG-DOP</argument>
+                  <argument>/CxServer</argument>
                   <argument>--server_url</argument>
                   <argument>https://eu.api-sca.checkmarx.net</argument>
                   
                   <argument>--username</argument>
                   <!-- <argument>${env.CMUSER}</argument> -->
-                  <argument>scanning-agent-lg-dop</argument>
+                  <argument>luis.garciaviejo@checkmarx.com</argument>
                   <argument>--password</argument>
                   <!-- <argument>${env.CMPASS}</argument> -->
-                  <argument>f-hqt5TMVqcI7RAmjJp345ZV</argument>
+                  <argument>CxPass123!/argument>
 
                   <argument>--scan-path</argument>
                   <argument>${project.basedir}</argument>
                   <argument>--authentication-server-url</argument>
                   <argument>https://eu.platform.checkmarx.net</argument>
-                  <argument>--proxies</argument>
-                  <argument>https:172.23.29.155:3128</argument>
+                  <!--argument>--proxies</argument-->
+                  <!--argument>https:172.23.29.155:3128</argument-->
 
                   <argument>--cxprojectname</argument>
-                  <argument>/CxServer/LG-DOP/AEM/lgi-generic_dev_test</argument>                   
+                  <argument>/CxServer/lgi-generic_dev_test</argument>                   
                   <argument>--cxserver</argument>
-                  <argument>https://libertyglobal.checkmarx.net</argument>
+                  <argument>https://kklibertyglobal.checkmarx.net</argument>
                   <argument>--cxuser</argument>
                   <!-- <argument>${env.CMUSER}</argument> -->
                   <argument>scanning-agent-lg-dop</argument>
