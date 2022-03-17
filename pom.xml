@@ -119,8 +119,8 @@
                   <argument>${project.basedir}</argument>
                   <argument>--authentication-server-url</argument>
                   <argument>https://eu.platform.checkmarx.net</argument>
-                  <!--argument>--proxies</argument-->
-                  <!--argument>https:172.23.29.155:3128</argument-->
+                  <!-- <argument>--proxies</argument> -->
+                  <!-- <argument>https:172.23.29.155:3128</argument> -->
 
                   <argument>--cxprojectname</argument>
                   <argument>/CxServer/lgi-generic_dev_test</argument>                   
