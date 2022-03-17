@@ -113,7 +113,7 @@
                   <argument>luis.garciaviejo@checkmarx.com</argument>
                   <argument>--password</argument>
                   <!-- <argument>${env.CMPASS}</argument> -->
-                  <argument>CxPass123!/argument>
+                  <argument>CxPass123!<argument>
 
                   <argument>--scan-path</argument>
                   <argument>${project.basedir}</argument>
