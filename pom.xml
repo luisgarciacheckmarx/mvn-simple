@@ -118,7 +118,7 @@
                   <argument>--scan-path</argument>
                   <argument>${project.basedir}</argument>
                   <argument>--authentication-server-url</argument>
-                  <argument>https://eu.platform.checkmarx.net</argument>
+                  <argument>https://platform.checkmarx.net</argument>
 
                   <argument>--cxprojectname</argument>
                   <argument>/CxServer/lgi-generic_dev_test</argument>                   
