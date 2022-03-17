@@ -72,4 +72,126 @@
       </plugins>
     </pluginManagement>
   </build>
+      <profiles>
+      <profile>
+        <!-- CheckMarx Software Composition Analysis -->
+        <id>sca</id>
+        <build>
+          <plugins>
+            <plugin>
+              <!--For CxConsole (Checkmarx CLI) execution-->
+              <!--mvn exec:exec -->
+              <groupId>org.codehaus.mojo</groupId>
+              <artifactId>exec-maven-plugin</artifactId>
+              <version>3.0.0</version>
+              <executions>
+                <execution>
+                  <id>sca</id>
+                  <goals>
+                    <goal>exec</goal>
+                  </goals>
+                </execution>
+              </executions>
+              <configuration>
+                <executable>/var/lib/devSecOps/ScaResolver-linux64/ScaResolver</executable>
+                <!--
+                <workingDirectory>/var/lib/devSecOps/ScaResolver-linux64</workingDirectory>
+                -->
+                <workingDirectory>${env.WORKSPACE}</workingDirectory>
+                <arguments>
+                  <argument>--project-name</argument>
+                  <argument>lgi-generic_dev_test</argument>
+                  <argument>--account</argument>
+                  <argument>LibertyGlobal</argument>
+                  <argument>--project_teams</argument>
+                  <argument>/CxServer/LG-DOP</argument>
+                  <argument>--server_url</argument>
+                  <argument>https://eu.api-sca.checkmarx.net</argument>
+                  
+                  <argument>--username</argument>
+                  <!-- <argument>${env.CMUSER}</argument> -->
+                  <argument>scanning-agent-lg-dop</argument>
+                  <argument>--password</argument>
+                  <!-- <argument>${env.CMPASS}</argument> -->
+                  <argument>f-hqt5TMVqcI7RAmjJp345ZV</argument>
+
+                  <argument>--scan-path</argument>
+                  <argument>${project.basedir}</argument>
+                  <argument>--authentication-server-url</argument>
+                  <argument>https://eu.platform.checkmarx.net</argument>
+                  <argument>--proxies</argument>
+                  <argument>https:172.23.29.155:3128</argument>
+
+                  <argument>--cxprojectname</argument>
+                  <argument>/CxServer/LG-DOP/AEM/lgi-generic_dev_test</argument>                   
+                  <argument>--cxserver</argument>
+                  <argument>https://libertyglobal.checkmarx.net</argument>
+                  <argument>--cxuser</argument>
+                  <!-- <argument>${env.CMUSER}</argument> -->
+                  <argument>scanning-agent-lg-dop</argument>
+                  <argument>--cxpassword</argument>
+                  <!-- <argument>${env.CMPASS}</argument> -->
+                  <argument>f-hqt5TMVqcI7RAmjJp345ZV</argument>
+                </arguments>
+              </configuration>
+            </plugin>
+          </plugins>
+        </build>
+      </profile>
+      <profile>
+        <!-- CheckMarx Software Composition Analysis -->
+        <id>sast</id>
+        <build>
+          <plugins>
+            <plugin>
+              <!--For CxConsole (Checkmarx CLI) execution-->
+              <!--mvn exec:exec -->
+              <groupId>org.codehaus.mojo</groupId>
+              <artifactId>exec-maven-plugin</artifactId>
+              <version>3.0.0</version>
+              <executions>
+                <execution>
+                  <id>sca</id>
+                  <goals>
+                    <goal>exec</goal>
+                  </goals>
+                </execution>
+              </executions>
+              <configuration>
+                <executable>/var/lib/devSecOps/CxConsolePlugin-1.1.10/runCxConsole.sh</executable>
+                <workingDirectory>/var/lib/devSecOps/CxConsolePlugin-1.1.10</workingDirectory>
+                <arguments>
+                  <argument>Scan</argument>
+                  <argument>-v</argument>
+                  <argument>-ProjectName </argument>
+                  <argument>CxServer/LG-DOP/AEM/lgi-generic_dev_test</argument>
+                  <argument>-CxServer</argument>
+                  <argument>https://libertyglobal.checkmarx.net</argument>
+                  
+                  <argument>-CxUser</argument>
+                  <!-- <argument>${env.CMUSER}</argument> -->
+                  <argument>scanning-agent-lg-dop</argument>
+                  <argument>-CxPassword</argument>
+                  <!-- <argument>${env.CMPASS}</argument> -->
+                  <argument>f-hqt5TMVqcI7RAmjJp345ZV</argument>
+
+                  <argument>-LocationType</argument>
+                  <argument>Folder</argument>
+                  <argument>-LocationPath</argument>
+                  <argument>${project.basedir}</argument>
+                  <argument>-LocationPathExclude</argument>
+                  <argument>/upc-generic/core/src/test</argument>
+                  
+                  <argument>-preset</argument>
+                  <argument>ASA-Premium-LG</argument>
+
+                  <argument>-Comment</argument>
+                  <argument>Commit: ${GIT_COMMIT}</argument>
+                </arguments>
+              </configuration>
+            </plugin>
+          </plugins>
+        </build>
+      </profile>
+    </profiles>
 </project>
