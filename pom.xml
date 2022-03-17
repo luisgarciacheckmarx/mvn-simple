@@ -106,7 +106,7 @@
                   <argument>--project_teams</argument>
                   <argument>/CxServer</argument>
                   <argument>--server_url</argument>
-                  <argument>https://eu.api-sca.checkmarx.net</argument>
+                  <argument>https://api-sca.checkmarx.net</argument>
                   
                   <argument>--username</argument>
                   <!-- <argument>${env.CMUSER}</argument> -->
